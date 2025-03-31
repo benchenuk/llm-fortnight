@@ -35,15 +35,30 @@ Like the publicly available benchmarks, for every new (version) of model, a same
 And then this process will repeat with every parameter or system prompt change, until a satisfactory combination is found.  
 
 
-## Current Lineup
-| Task | Base | Custom Model| Comments |
-| ----------- | ----------- | ----------- | ----------- |
-| General | **Gemini3 12B** | gemini3-flash | Summarization, fast, decent reasoning |
-|         | Phi4 Mini | phi4-flash | Very fast, logic |
-| Complex | **DeepSeek 14B** | deepseek-reason| Balanced |
-|         | QwQ 32B | qwq-32b | Full but slow |
-| Code    | **Qwen2.5 Coder 14B** | [TBD] | [TBD] |
-| Other(Agent) | Mistral Small 3 24B | mistral-agent | [TBD]
+## Current Lineup - Local
+| Task | Release | Custom| Comments |
+| --- | --- | ---| --- |
+| General | **Gemini3 12B** | general-gemma3 | Summarization, fast, decent reasoning, multimodal |
+|         | Phi4 Mini | general-phi4-mini | Very fast |
+| Reason | **DeepSeek 14B** | reason-deepseek | Balanced |
+|        | **Phi 4** | reason-phi4 | Faster |
+| Code    | **Qwen2.5 Coder 14B** | code-qwen | Implementation |
+|         | **DeepSeek 14B** | code-deepseek  | Design discussion |
+
+
+## Current Lineup - Hosted
+| Task | Release | Comments |
+| --- | --- | ---|
+| General | **GPT-4o** | Summarization, fast |
+|         | Deepseek V3 0324 | All-rounder |
+|         | Gemini 2.0 Flash | Fast, not reliable, non critical |
+| Code | **Claude 3.7 / 3.5** | Poor multi-turn following |
+|      | **Deepseek R1** | Design discussion | 
+|      | Gemini 2.0 Flash | Cheap, fast, reliable |  
+|      | Gemini 2.5 Pro | [TBD]] | 
+| Thinking | **o3 Mini High** |  | 
+| Deep Research | **Grok 3** | Real time, web search |
+| Creative Writing | **DeepSeek R1** |  |
 
 
 ## References
@@ -63,11 +78,9 @@ And then this process will repeat with every parameter or system prompt change, 
 
 ## TO DO
 - DeepSeek Distilled Versions
-- Gemma3 Flash
 - Open WebUI + Searxng / Duckduckgo
 - Coder Prompt
 - LM Studio vs. Ollama
-- Phi4 Flash
 - Preplexica
 - Local Knowledge Base / RAG
 - Agent frameworks / LangGraph
