@@ -57,7 +57,10 @@ And then this process will repeat with every parameter or system prompt change, 
 |      | Gemini 2.0 Flash | Cheap, fast, reliable |  
 |      | Gemini 2.5 Pro | [TBD]] | 
 | Thinking | **o3 Mini High** |  | 
-| Deep Research | **Grok 3** | Real time, web search |
+|          | **Deepseek R1** |  | 
+|          | Claude 3.7 Thinking |  | 
+| Deep Research | **Gemini 2.0 Flash Thinking** | Reliable | 
+|               | Grok 3 | Real time, web search |
 | Creative Writing | **DeepSeek R1** |  |
 
 
@@ -84,3 +87,6 @@ And then this process will repeat with every parameter or system prompt change, 
 - Preplexica
 - Local Knowledge Base / RAG
 - Agent frameworks / LangGraph
+- ~~Continue AI~~
+- LiteLLM
+- MCP
