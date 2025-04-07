@@ -2,9 +2,6 @@
 
 Setting the following environment as an example to explore MCP servers:
 
-`Dive -> DBHub -> PostgreSQL`
-
-
 ## Dive AI Agent 
 [Dive](https://github.com/OpenAgentPlatform/Dive) is an open-source MCP Host Desktop Application that seamlessly integrates with any LLMs supporting function calling capabilities. 
 
@@ -72,7 +69,7 @@ brew services stop postgresql
 brew services start postgresql
 ```
 
-**Useful files**
+*![*Useful files**
 ```
 /opt/homebrew/var/postgresql@17/pg_hba.conf #host all all 0.0.0.0 32 trust
 /opt/homebrew/var/postgresql@17/postgresql.conf #listen_addresses = '*'
@@ -88,3 +85,26 @@ npx @modelcontextprotocol/inspector node build/index.js
 ```
 Use the SSE URL to the target MCP server. E.g. `http://localhost:8080/sse`.
 
+`Copilot -> Dive -> DBHub -> PostgreSQL`
+
+## VS Code Copilot
+In [agent](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode) mode, Copilot autonomously plans the work needed and determines the relevant files and context. It then makes edits to your codebase and invokes tools to accomplish the request you made.
+
+### Configuration
+- Enable Agent Mode: `chat.agent.enabled` 
+- Add MCP Server. This will effectively configured in `settings.json`
+```json
+    "mcp": {
+        "servers": {
+            "my-mcp-server-ed9265e1": {
+                "type": "sse",
+                "url": "http://localhost:8080/sse"
+            }
+        }
+    }
+```
+
+
+Then it is possible to interact with the underlying service, e.g. a database
+
+![images/copilot.mcp.chat](../images/copilot.mcp.chat.png)
